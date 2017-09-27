@@ -1,23 +1,69 @@
+
+.toggleSleep{
+	color: white;
+	background: black;
+}
 body{
-	background-color: black;
+	background-image: url('images/raglan01.png');
+	background-size: 100%;
+}
+.containerButtons{
+	display: flex;
+	justify-content: center;
+	
+}
+.containerStats{
+	display: flex;
+	justify-content: center;
+}
+.charName{
+	display: flex;
+	justify-content: center;
+}
+.charAge{
+	display: flex;
+	justify-content: center;
+}
+.spriteScreen{
+	display: flex;
+	justify-content: center;
+	z-index: 100;
+}
+#knightChi{
+	margin-top: 600px;
+}
+
+.toma{
+	margin:5px;
+	font-size: 30px;
+	text-align: center;
+	flex-basis:20%;
+}
+.button{
+	border:thick solid rgba(0, 0, 0, 0.7);
+	box-shadow: 4px 4px 0px 2px;
+	border-radius: 10px;
+	margin:5px;
+	font-size: 10px;
+	background-color: rgb(123, 200, 147);
+	text-align: center;
+}
+.button:hover{
+	background-color: red;
 }
 #tomaName{
-
-	color: white;
-}
+	width: 80%;
+} 
 #tomaAge{
 
-	color: white;
 }
 #tomaHunger{
 
-	color: white;
 }
 #tomaBoredom{
 
-	color: white;
 }
 #tomaSleepiness{
 
-	color: white;
 }
+
