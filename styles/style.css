@@ -4,7 +4,7 @@
 	background: black;
 }
 body{
-	background-image: url('images/raglan01.png');
+	background-image: url('images/tatooineBackground.png');
 	background-size: 100%;
 }
 .containerButtons{
@@ -29,8 +29,15 @@ body{
 	justify-content: center;
 	z-index: 100;
 }
-#knightChi{
-	margin-top: 600px;
+#youngAnakin{
+	position: relative;
+	margin-top: 150px;
+	margin-right: 800px;
+	/*-webkit-animation: spinreverse 10s infinite linear;*/
+	 -webkit-animation: backandforth 5s ease 0s;
+    -webkit-animation-iteration-count:infinite;
+    animation: backandforth 5s ease 0s;
+    animation-iteration-count: infinite;
 }
 
 .toma{
@@ -41,12 +48,13 @@ body{
 }
 .button{
 	border:thick solid rgba(0, 0, 0, 0.7);
-	box-shadow: 4px 4px 0px 2px;
+	box-shadow: 4px 4px 0px 2px black;
 	border-radius: 10px;
 	margin:5px;
 	font-size: 10px;
-	background-color: rgb(123, 200, 147);
+	background-color: black;
 	text-align: center;
+	color: white;
 }
 .button:hover{
 	background-color: red;
@@ -66,4 +74,12 @@ body{
 #tomaSleepiness{
 
 }
+@-webkit-keyframes spinreverse {
+    0%  {-webkit-transform: rotate(0deg);}
+    100% {-webkit-transform: rotate(-360deg);}   
+}
+
+@-webkit-keyframes backandforth {0%{left:0;} 50%{left:58%;} 100%{left:0;}}
+@keyframes backandforth {0%{left:0;} 50%{left:100%;} 100%{left:0;}}
+
 
