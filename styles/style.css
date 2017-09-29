@@ -19,10 +19,12 @@ body{
 .charName{
 	display: flex;
 	justify-content: center;
+	color: cornsilk;
 }
 .charAge{
 	display: flex;
 	justify-content: center;
+	color: cornsilk;
 }
 .spriteScreen{
 	display: flex;
@@ -66,13 +68,13 @@ body{
 
 }
 #tomaHunger{
-
+color: cornsilk;
 }
 #tomaBoredom{
-
+color: cornsilk;
 }
 #tomaSleepiness{
-
+color: cornsilk;
 }
 @-webkit-keyframes spinreverse {
     0%  {-webkit-transform: rotate(0deg);}

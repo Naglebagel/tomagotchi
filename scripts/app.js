@@ -26,7 +26,7 @@ const increaseHunger = () => {
 	}
 };
 
-setInterval(increaseHunger, 60000);
+setInterval(increaseHunger, 5000);
 
 const increaseBoredom = () => {
 	toma.boredom += 1;
@@ -37,7 +37,7 @@ const increaseBoredom = () => {
 	}
 };
 
-setInterval(increaseBoredom, 60000);
+setInterval(increaseBoredom, 5000);
 
 const increaseSleepines = () => {
 	toma.sleepiness += 1;
@@ -48,7 +48,7 @@ const increaseSleepines = () => {
 	}
 };
 
-setInterval(increaseSleepines, 60000);
+setInterval(increaseSleepines, 5000);
 
 const increaseAge = () => {
 	toma.age += 1;
@@ -58,10 +58,10 @@ const increaseAge = () => {
 	}
 };
 
-setInterval(increaseAge, 60000);
+setInterval(increaseAge, 2000);
 
 const decreaseHunger = () => {
-	console.log ('click!!!')
+	// console.log ('click!!!')
 	if (toma.hunger >= 2){
 		toma.hunger -=1;
 		$('#tomaHunger').text('Hunger: ' + toma.hunger);
@@ -73,7 +73,7 @@ const decreaseHunger = () => {
 }
 
 const decreaseBoredom = () => {
-		console.log ('click!!!')
+		// console.log ('click!!!')
 	if (toma.boredom >= 2){
 		toma.boredom -=1;
 		$('#tomaBoredom').text('Boredom: ' + toma.boredom);
@@ -84,7 +84,7 @@ const decreaseBoredom = () => {
 }
 
 const decreaseSleepiness = () => {
-		console.log ('click!!!')
+		// console.log ('click!!!')
 	if (toma.sleepiness >= 2){
 		toma.sleepiness -= toma.sleepiness;
 		$('body').toggleClass('toggleSleep');
@@ -108,15 +108,27 @@ const evolveAkin = () => {
 				$('#youngAnakin').attr('src', 'styles/images/dVaderSprite.png').fadeIn(1000);
 			});
 		}
+		else if (toma.hunger >= 8 && $('#youngAnakin').attr('src') === "styles/images/anakinSprite.png"){
+			$('body').css('background-image', 'url(styles/images/deathStarCorridor.png)');
+			$('#youngAnakin').fadeOut(1000, function(){
+				$('#youngAnakin').attr('src', 'styles/images/dVaderSprite.png').fadeIn(1000);
+			});
+		}
 }
 
 
-setInterval(evolveAkin, 5000);
+setInterval(evolveAkin, 1000);
 
 const toma = new Tomagotchi();
 console.log(toma);
 toma.setName();
-$('#theme')[0].play();
+
+const myAudio = new Audio('styles/audio/mustaTheme.mp3'); 
+myAudio.addEventListener('ended', function() {
+    this.currentTime = 0;
+    this.play();
+}, false);
+myAudio.play();
 
 $('#tomaName').text('Name: ' + toma.name);
 $('#tomaAge').text('Age: ' + toma.age);
